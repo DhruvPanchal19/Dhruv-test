@@ -1,0 +1,279 @@
+/* Root Variables for Light and Dark Mode */
+:root {
+    --h-white: #FFFFFF;
+    --h-white-2: #000000;
+    --h-white-20: rgba(255, 255, 255, 0.3);
+    --h-primary: #E0F8FF;
+    --h-primary-hover: rgba(224, 248, 255, 0.3);
+    --h-secondary: #252C32;
+    --h-secondary-10: rgba(38, 73, 109, 0.1);
+    --h-secondary-60: rgba(38, 73, 109, 0.6);
+    --h-border: #BCEFFF;
+    --h-grey: #F2F2F2;
+    --h-red: #F12626;
+    --h-green: #C7FFAD;
+    --link-color: #0761AF;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+    --h-white: #101010;
+    --h-white-2: #FFFFFF;
+    --h-primary: #2AAAD1;
+    --h-primary-hover: rgba(42, 170, 209, 0.3);
+    --h-secondary: #C6E5FF;
+    --h-secondary-10: rgba(198, 229, 255, 0.1);
+    --h-secondary-60: rgba(198, 229, 255, 0.6);
+    --h-border: #31B6DF;
+    --h-grey: #424242;
+    --h-red: #BC1919;
+    --h-green: #5BC519;
+    --link-color: #0761AF;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--h-white);
+    color: var(--h-secondary);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--h-secondary);
+    color: var(--h-white);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--h-white);
+    border-bottom: 1px solid var(--h-border);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--h-secondary-60);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.search-bar {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid var(--h-border);
+    border-radius: 4px;
+}
+
+.search-bar .search-btn {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: var(--h-primary);
+    color: var(--h-white-2);
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode .search-bar input {
+    background-color: var(--h-white-20);
+    color: var(--h-white);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 30px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--h-secondary);
+    font-weight: 500;
+}
+
+body.dark-mode .nav-link {
+    color: var(--h-white-2);
+}
+
+.nav-link.active {
+    color: var(--h-primary);
+}
+
+body.dark-mode .nav-link.active {
+    color: var(--h-primary-hover);
+}
+
+/* Toggle Switch for Dark/Light Mode */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--h-grey);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+body.dark-mode .slider {
+    background-color: var(--h-secondary-60);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--h-white);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--h-primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Main Layout Styles */
+header {
+    background-color: var(--h-grey);
+    padding: 20px;
+    text-align: center;
+    color: var(--h-secondary);
+}
+
+body.dark-mode header {
+    background-color: var(--h-secondary);
+    color: var(--h-white);
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumbs ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.breadcrumbs ul li a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+body.dark-mode .breadcrumbs ul li a {
+    color: var(--h-white);
+}
+
+/* Landing Page */
+.landing-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.items-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.item {
+    background-color: var(--h-white);
+    border: 1px solid var(--h-border);
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+body.dark-mode .item {
+    background-color: var(--h-secondary-10);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: var(--h-secondary);
+}
+
+body.dark-mode .item h3 {
+    color: var(--h-white);
+}
+
+.item p {
+    color: var(--h-secondary);
+}
+
+body.dark-mode .item p {
+    color: var(--h-white);
+}
+
+.item .btn {
+    background-color: var(--h-primary);
+    padding: 10px;
+    border: none;
+    color: var(--h-white-2);
+    cursor: pointer;
+}
+
+body.dark-mode .item .btn {
+    background-color: var(--h-primary-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--h-grey);
+    color: var(--h-secondary);
+}
+
+body.dark-mode footer {
+    background-color: var(--h-secondary);
+    color: var(--h-white);
+}
