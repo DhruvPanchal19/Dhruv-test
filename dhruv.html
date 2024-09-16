@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="Project-container">
+  <div class="nav-container">
+    <span class="back-button"><i class="ri-arrow-go-back-line"></i></span>
+    <div class="navbar">
+      <a href="#" onclick="showTab('home')"><i class="fa fa-home"></i> Home</a>
+      <a href="#" onclick="showTab('search')"><i class="fa fa-search"></i> Search</a>
+      <a href="#" onclick="showTab('contact')"><i class="fa fa-envelope"></i> Contact</a>
+      <a href="#" onclick="showTab('login')"><i class="fa fa-user"></i> Login</a>
+    </div>
+  </div>
+  <div id="home" class="content active">
+    <h1>Welcome to the Home Page</h1>
+    <!-- Add your home page content here -->
+  </div>
+  <div id="search" class="content">
+    <h1>Search Page</h1>
+    <!-- Add your search page content here -->
+  </div>
+  <div id="contact" class="content">
+    <h1>Contact Us</h1>
+    <!-- Add your contact page content here -->
+  </div>
+  <div id="login" class="content">
+    <h1>Login Page</h1>
+    <!-- Add your login page content here -->
+  </div>
+</div>
+<script>
+  function showTab(tabId) {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => {
+      content.style.display = 'none';
+      content.classList.remove('active');
+    });
+
+    const activeTab = document.getElementById(tabId);
+    if (activeTab) {
+      activeTab.style.display = 'block';
+      activeTab.classList.add('active');
+    }
+
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => link.classList.remove('active'));
+    document.querySelector(`.navbar a[onclick="showTab('${tabId}')"]`).classList.add('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    showTab('home');
+  });
+</script>
+</body>
+</html>
