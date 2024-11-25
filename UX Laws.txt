@@ -1,0 +1,191 @@
+1. Jakob's Law
+Creator: Jakob Nielsen
+Description: Users spend most of their time on other sites, so they prefer your site to work the same way as all the other sites they already know.
+Examples:
+E-commerce Websites: Sites like Amazon and eBay have similar layouts with search bars at the top, product categories on the left, and shopping carts in the top right corner.
+Social Media Platforms: Facebook, Twitter, and LinkedIn have consistent navigation menus and profile layouts.
+News Websites: CNN, BBC, and The New York Times use similar structures for headlines, articles, and navigation.
+_____________________________________________________________________________________________________________________________________________________
+2. Fitts's Law
+Creator: Paul Fitts
+Description: The time to acquire a target is a function of the distance to and size of the target. Larger and closer targets are easier to hit.
+Examples:
+Mobile App Buttons: Large, easily clickable buttons on apps like Instagram's "Like" button.
+Desktop Interfaces: The "Start" button in Windows is large and located at the corner for easy access.
+Gaming Controllers: Buttons on game controllers are designed to be large and within easy reach.
+_____________________________________________________________________________________________________________________________________________________
+3. Hick's Law
+Creators: William Edmund Hick and Ray Hyman
+Description: The time it takes to make a decision increases with the number and complexity of choices.
+Examples:
+Google Search: A minimalistic homepage with a single search bar.
+Apple's Product Pages: Simple and clean product selection pages with limited options.
+Navigation Menus: Websites like Medium use concise and straightforward navigation menus.
+_____________________________________________________________________________________________________________________________________________________
+4. Miller's Law
+Creator: George A. Miller
+Description: The average person can only keep 7 (plus or minus 2) items in their working memory.
+Examples:
+Phone Number Formatting: Breaking numbers into chunks (e.g., (123) 456-7890).
+Menu Items: Limiting the number of items in a navigation menu to around 7.
+Bullet Points: Using bullet points in presentations to keep information manageable.
+_____________________________________________________________________________________________________________________________________________________
+5. Aesthetic-Usability Effect
+Creators: Masaaki Kurosu and Kaori Kashimura
+Description: Users often perceive aesthetically pleasing design as more usable.
+Examples:
+Apple Products: Known for their sleek, aesthetically pleasing designs.
+Tesla's Interface: Clean and modern design of the car's dashboard interface.
+Airbnb's Website: Visually appealing design that enhances usability.
+_____________________________________________________________________________________________________________________________________________________
+6. Law of Proximity
+Creator: Gestalt Psychology
+Description: Objects that are near each other tend to be grouped together.
+Examples:
+Form Fields: Grouping related fields together in a form (e.g., name, email, phone number).
+Navigation Menus: Grouping related menu items together.
+Product Listings: Grouping similar products together on e-commerce sites.
+_____________________________________________________________________________________________________________________________________________________
+7. Law of Similarity
+Creator: Gestalt Psychology
+Description: The human eye tends to perceive similar elements in a design as a complete picture, shape, or group, even if those elements are separated.
+Examples:
+Toolbar Icons: Similar icons in a toolbar (e.g., text formatting options in Microsoft Word).
+Product Categories: Similar product images grouped together on an e-commerce site.
+Social Media Feeds: Similar post formats on platforms like Facebook and Twitter.
+_____________________________________________________________________________________________________________________________________________________
+8. Law of Common Region
+Creator: Gestalt Psychology
+Description: Elements tend to be perceived into groups if they are sharing an area with a clearly defined boundary.
+Examples:
+Sidebar Widgets: Bordered sections on a webpage, like the sidebar on a blog.
+Card Layouts: Grouping related information in cards on dashboards.
+Form Sections: Using borders to separate different sections of a form.
+_____________________________________________________________________________________________________________________________________________________
+9. Law of Prägnanz
+Creator: Gestalt Psychology
+Description: People will perceive and interpret ambiguous or complex images as the simplest form possible.
+Examples:
+Logos: Simplified logos like the Nike swoosh.
+Icons: Simple and clear icons in user interfaces.
+Infographics: Using simple shapes and designs to convey complex information.
+_____________________________________________________________________________________________________________________________________________________
+10. Serial Position Effect
+Creator: Hermann Ebbinghaus
+Description: Users have a propensity to best remember the first and last items in a series.
+Examples:
+Navigation Menus: Placing important menu items at the beginning and end.
+Lists: Highlighting the first and last items in a list.
+Presentations: Emphasizing key points at the start and end of a presentation.
+_____________________________________________________________________________________________________________________________________________________
+11. Peak-End Rule
+Creators: Daniel Kahneman and Barbara Fredrickson
+Description: People judge an experience largely based on how they felt at its peak and at its end, rather than the total sum or average of every moment of the experience.
+Examples:
+Checkout Process: A memorable checkout process that ends with a thank-you message.
+Customer Service: Ensuring the final interaction with customer service is positive.
+Onboarding: Creating a strong first impression and a satisfying completion experience.
+_____________________________________________________________________________________________________________________________________________________
+12. Von Restorff Effect
+Creator: Hedwig von Restorff
+Description: When multiple similar objects are present, the one that differs from the rest is most likely to be remembered.
+Examples:
+Call-to-Action Buttons: Highlighting a "Sign Up" button in a different color.
+Special Offers: Using contrasting colors for promotional banners.
+Error Messages: Displaying error messages in a distinct color to grab attention.
+_____________________________________________________________________________________________________________________________________________________
+13. Doherty Threshold
+Creators: Walter J. Doherty and Ahrvind J. Thadani
+Description: Productivity soars when a computer and its users interact at a pace (<400ms) that ensures neither has to wait on the other.
+Examples:
+Loading Indicators: Progress bars or spinners that appear within 400ms.
+Instant Feedback: Immediate visual feedback on button clicks.
+Search Suggestions: Real-time search suggestions as users type.
+_____________________________________________________________________________________________________________________________________________________
+14. Occam's Razor
+Creator: William of Ockham
+Description: Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.
+Examples:
+Minimalist Design: Simple, straightforward interfaces like the Google homepage.
+Clear Navigation: Avoiding unnecessary menu items and options.
+Direct Messaging: Using clear and concise language in user interfaces.
+_____________________________________________________________________________________________________________________________________________________
+15. Pareto Principle
+Creator: Vilfredo Pareto
+Description: For many events, roughly 80% of the effects come from 20% of the causes.
+Examples:
+Feature Prioritization: Focusing on the most used features in an app.
+Bug Fixing: Addressing the most common issues that affect the majority of users.
+Content Creation: Creating content that generates the most engagement.
+_____________________________________________________________________________________________________________________________________________________
+16. Parkinson's Law
+Creator: Cyril Northcote Parkinson
+Description: Any task will inflate until all of the available time is spent.
+Examples:
+Project Deadlines: Setting clear deadlines to ensure tasks are completed efficiently.
+Time Management: Allocating specific time slots for tasks.
+Sprint Planning: Using agile methodologies to manage project timelines.
+_____________________________________________________________________________________________________________________________________________________
+17. Tesler's Law
+Creator: Larry Tesler
+Description: Also known as the Law of Conservation of Complexity, it states that every application has an inherent amount of irreducible complexity.
+Examples:
+One-Click Purchasing: Simplifying complex processes like Amazon's one-click purchase.
+Automated Workflows: Using automation to handle complex tasks.
+User Onboarding: Streamlining the onboarding process to reduce complexity.
+_____________________________________________________________________________________________________________________________________________________
+18. Postel's Law
+Creator: Jon Postel
+Description: Be liberal in what you accept, and conservative in what you send.
+Examples:
+Web Browsers: Handling various HTML errors and still rendering the page correctly.
+Form Validation: Accepting different date formats and standardizing them.
+API Design: Designing APIs to be flexible in what they accept.
+_____________________________________________________________________________________________________________________________________________________
+19. Goal-Gradient Effect
+Creator: Clark Hull
+Description: The tendency to approach a goal increases with proximity to the goal. Users are more motivated to complete tasks as they get closer to finishing them.
+Examples:
+Progress Bars: Showing progress in online surveys or forms.
+Loyalty Programs: Displaying points needed to reach the next reward tier.
+Task Completion: Highlighting remaining steps in a multi
+_____________________________________________________________________________________________________________________________________________________
+19. Goal-Gradient Effect
+Creator: Clark Hull
+Description: The tendency to approach a goal increases with proximity to the goal. Users are more motivated to complete tasks as they get closer to finishing them.
+Examples:
+Progress Bars: Showing progress in online surveys or forms, like the progress bar in Google Forms.
+Loyalty Programs: Displaying points needed to reach the next reward tier, such as Starbucks Rewards.
+Task Completion: Highlighting remaining steps in a multi-step process, like LinkedIn's profile completion meter.
+_____________________________________________________________________________________________________________________________________________________
+20. Zeigarnik Effect
+Creator: Bluma Zeigarnik
+Description: People remember uncompleted or interrupted tasks better than completed tasks. This can be used to encourage users to return to unfinished tasks.
+Examples:
+Task Management Apps: Showing incomplete tasks prominently, like Todoist.
+E-commerce Carts: Reminding users of items left in their shopping cart, like Amazon's cart reminders.
+Online Courses: Highlighting unfinished lessons to encourage users to complete them, like Coursera.
+_____________________________________________________________________________________________________________________________________________________
+21. Law of Uniform Connectedness
+Creator: Gestalt Psychology
+Description: Elements that are visually connected are perceived as more related than elements with no connection.
+Examples:
+Navigation Menus: Using connected background colors or borders to indicate related items, like the sidebar menu in Slack.
+Form Sections: Grouping related form fields with borders or background colors, like Google Forms.
+Dashboard Widgets: Using visual connections to group related data, like in Google Analytics.
+_____________________________________________________________________________________________________________________________________________________
+22. Paradox of the Active User
+Creators: John M. Carroll and Mary Beth Rosson
+Description: Users prefer to start using a system immediately rather than spend time learning about it. This emphasizes the need for intuitive design.
+Examples:
+Software Onboarding: Providing intuitive interfaces that allow users to start using the software immediately, like Slack.
+Mobile Apps: Designing apps that are easy to use without extensive tutorials, like Instagram.
+Web Applications: Ensuring web apps are straightforward and require minimal learning, like Trello.
+_____________________________________________________________________________________________________________________________________________________
+23. Cognitive Load Theory
+Creator: John Sweller
+Description: The amount of mental effort being used in the working memory. Designs should aim to reduce cognitive load to improve user experience.
+Examples:
+Dashboard Designs: Presenting information in a clear, organized manner to reduce cognitive load, like Google Analytics.
+E-commerce Websites: Simplifying the checkout process to minimize cognitive load, like Amazon's one-click purchase.
+Educational Platforms: Breaking down complex information into manageable chunks, like Khan Academy.
