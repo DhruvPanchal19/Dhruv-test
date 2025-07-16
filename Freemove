@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desk Booking — Enhanced Scroll</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+    }
+
+    .top-header {
+      height: 50px;
+      background-color: #111827;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 20px;
+    }
+
+    .close-btn {
+      background: #ef4444;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .close-btn:hover {
+      background: #dc2626;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100% - 50px);
+    }
+
+    .left-panel {
+      width: 300px;
+      background-color: #f3f4f6;
+      overflow-y: auto;
+      padding: 12px;
+      border-right: 1px solid #e5e7eb;
+    }
+
+    .client-card {
+      background: white;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .client-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .right-panel {
+      flex: 1;
+      background-color: #ffffff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .canvas-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .desk-scroll {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .desk-layout {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      transform-origin: top left;
+      position: relative;
+      padding: 50px;
+    }
+
+    .section {
+      margin-right: 80px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #374151;
+    }
+
+    .desk-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .desk {
+      background: #3b82f6;
+      border-radius: 8px;
+      color: white;
+      padding: 8px;
+      display: flex;
+      flex-direction: row;
+      font-weight: 500;
+      font-size: 13px;
+      width: 150px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      user-select: none;
+    }
+
+    .desk:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+      z-index: 2;
+    }
+
+    .desk .title {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .desk .stat {
+      font-size: 12px;
+      opacity: 0.9;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-header">
+    <button class="close-btn">Close</button>
+  </div>
+
+  <div class="container">
+    <div class="left-panel">
+      <div class="client-card">Client A</div>
+      <div class="client-card">Client B</div>
+      <div class="client-card">Client C</div>
+      <div class="client-card">Client D</div>
+    </div>
+
+    <div class="right-panel">
+      <div class="canvas-container" id="canvas">
+        <div class="desk-scroll" id="deskScroll">
+          <div class="desk-layout" id="deskLayout">
+            <!-- Sections will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const deskLayout = document.getElementById("deskLayout");
+
+    const getRandomStat = () => Math.floor(Math.random() * 100);
+
+    const createSections = () => {
+      const sections = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+      sections.forEach(sec => {
+        const section = document.createElement('div');
+        section.className = 'section';
+
+        const title = document.createElement('div');
+        title.className = 'section-title';
+        title.innerText = `Section ${sec}`;
+        section.appendChild(title);
+
+        const deskRows = document.createElement('div');
+        deskRows.className = 'desk-rows';
+
+        for (let i = 1; i <= 50; i += 2) {
+          const row = document.createElement('div');
+          row.className = 'row';
+
+          for (let j = 0; j < 2; j++) {
+            const deskNumber = i + j;
+            if (deskNumber > 50) break;
+
+            const desk = document.createElement('div');
+            desk.className = 'desk';
+
+            desk.innerHTML = `
+              <div class="title">${sec}${deskNumber.toString().padStart(2, '0')}</div>
+              <div class="stat">#1: ${getRandomStat()}</div>
+              <div class="stat">#2: ${getRandomStat()}</div>
+              <div class="stat">#3: ${getRandomStat()}</div>
+            `;
+
+            row.appendChild(desk);
+          }
+
+          deskRows.appendChild(row);
+        }
+
+        section.appendChild(deskRows);
+        deskLayout.appendChild(section);
+      });
+    };
+
+    createSections();
+
+    // PAN & ZOOM VARIABLES
+    const canvas = document.getElementById("canvas");
+    const deskScroll = document.getElementById("deskScroll");
+
+    let isDragging = false;
+    let isSpacePressed = false;
+    let lastX = 0, lastY = 0;
+    let translate = { x: 0, y: 0 };
+    let scale = 1;
+
+    const updateTransform = () => {
+      deskLayout.style.transform = `translate(${translate.x}px, ${translate.y}px) scale(${scale})`;
+    };
+
+    // MOUSE DRAG FOR PANNING
+    canvas.addEventListener("mousedown", (e) => {
+      if (isSpacePressed) {
+        isDragging = true;
+        lastX = e.clientX;
+        lastY = e.clientY;
+        canvas.style.cursor = 'grabbing';
+      }
+    });
+
+    canvas.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        translate.x += dx;
+        translate.y += dy;
+        lastX = e.clientX;
+        lastY = e.clientY;
+        updateTransform();
+      }
+    });
+
+    canvas.addEventListener("mouseup", () => {
+      isDragging = false;
+      canvas.style.cursor = isSpacePressed ? 'grab' : 'default';
+    });
+
+    canvas.addEventListener("mouseleave", () => {
+      isDragging = false;
+      canvas.style.cursor = 'default';
+    });
+
+    canvas.addEventListener("mouseenter", () => {
+      canvas.style.cursor = isSpacePressed ? 'grab' : 'default';
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        isSpacePressed = true;
+        canvas.style.cursor = isDragging ? 'grabbing' : 'grab';
+        e.preventDefault();
+      }
+    });
+
+    window.addEventListener("keyup", (e) => {
+      if (e.code === "Space") {
+        isSpacePressed = false;
+        canvas.style.cursor = 'default';
+      }
+    });
+
+    // ENHANCED SCROLL LOGIC
+    deskScroll.addEventListener("wheel", (e) => {
+      if (isSpacePressed) {
+        // Zooming
+        e.preventDefault();
+        const delta = -e.deltaY;
+        const zoomFactor = 0.001;
+        scale += delta * zoomFactor;
+        scale = Math.min(Math.max(0.4, scale), 2.5);
+        updateTransform();
+      } else {
+        // Default scroll
+        if (e.shiftKey) {
+          deskScroll.scrollLeft += e.deltaY; // Horizontal scroll
+        } else {
+          deskScroll.scrollTop += e.deltaY; // Vertical scroll
+        }
+      }
+    }, { passive: false });
+
+    updateTransform();
+  </script>
+
+</body>
+
+</html>
