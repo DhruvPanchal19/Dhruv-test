@@ -1,0 +1,331 @@
+Design a professional component audit table for a healthcare SaaS design system 
+audit. Dark background (#0F1117). Title at top: "UI Component Audit — Pre-System 
+State" in white bold uppercase.
+
+Table has 6 columns:
+- Component Name
+- Screens Found
+- Variant Count
+- Inconsistency Type
+- Severity (color-coded badge)
+- Action
+
+Include 12 rows of real healthcare UI components:
+1. Primary Button | 20 screens | 6 variants | Size + Color drift | 🔴 Critical | Standardize
+2. Input Field | 15 screens | 5 variants | Border + height | 🔴 Critical | Rebuild
+3. Badge/Tag | 18 screens | 7 variants | Color meaning inconsistent | 🔴 Critical | Redesign
+4. Data Table Row | 12 screens | 4 variants | Padding + typography | 🟠 High | Unify
+5. Modal Dialog | 8 screens | 3 variants | Header treatment | 🟠 High | Template
+6. Dropdown | 14 screens | 5 variants | Arrow icon + height | 🟠 High | Standardize
+7. Status Indicator | 22 screens | 8 variants | Color semantics | 🔴 Critical | Token-map
+8. Navigation Item | 6 screens | 3 variants | Icon size + label | 🟡 Medium | Align
+9. Alert Banner | 10 screens | 4 variants | Icon + spacing | 🟠 High | Consolidate
+10. Avatar/User chip | 9 screens | 3 variants | Size inconsistency | 🟡 Medium | Scale
+11. Pagination | 7 screens | 3 variants | Active state color | 🟡 Medium | Token-map
+12. Card Container | 16 screens | 5 variants | Shadow + radius | 🟠 High | Unify
+
+Severity badges: red pill for Critical, orange for High, yellow for Medium.
+Add red annotation circles on 3 worst offenders (rows 1, 3, 7).
+Bottom note: "12 of 34 catalogued components found in conflicting versions across 20+ screens"
+Clean monospace font for table. White/gray zebra rows. Professional audit document aesthetic.
+
+
+________Round 2____________
+Design a clean technical diagram showing a 3-layer design token architecture for 
+a healthcare SaaS product. White background with subtle grid. Title: 
+"Token Architecture — Three-Layer Model" in dark bold text.
+
+Show 3 columns connected by right-pointing arrows (→):
+
+COLUMN 1 — "Primitive Tokens" (left, blue header #0053C8)
+Subtitle: "Raw values. No meaning attached."
+Show color swatches with token names:
+- color/blue/100 = #EBF2FF
+- color/blue/500 = #1D4ED8  
+- color/blue/900 = #1E3A8A
+- color/red/500 = #EF4444
+- color/green/500 = #22C55E
+- color/gray/0 = #FFFFFF
+- color/gray/900 = #111827
+- spacing/4 = 4px
+- spacing/8 = 8px
+- spacing/16 = 16px
+- radius/sm = 4px
+- radius/md = 8px
+
+COLUMN 2 — "Semantic Tokens" (center, teal header #0E7490)
+Subtitle: "Meaning mapped to primitives."
+Show token mappings:
+- color/action/primary → {color/blue/500}
+- color/action/danger → {color/red/500}
+- color/action/success → {color/green/500}
+- color/surface/default → {color/gray/0}
+- color/surface/subtle → {color/gray/50}
+- color/text/primary → {color/gray/900}
+- color/text/secondary → {color/gray/500}
+- color/border/default → {color/gray/200}
+- spacing/component/sm → {spacing/8}
+- spacing/component/md → {spacing/16}
+- radius/component → {radius/md}
+
+COLUMN 3 — "Component Tokens" (right, dark header #1F2937)
+Subtitle: "Usage-specific. Bound to components."
+- button/bg/default → {color/action/primary}
+- button/bg/hover → {color/blue/700}
+- button/text → {color/gray/0}
+- button/radius → {radius/component}
+- input/border/default → {color/border/default}
+- input/border/focus → {color/action/primary}
+- badge/bg/error → {color/action/danger}
+- badge/text/error → #FFFFFF
+- table/row/selected → {color/blue/50}
+
+Bottom callout box in amber: 
+"1 semantic token update → cascades across 40+ component properties simultaneously"
+
+Use arrows showing cascade flow. Professional, technical diagram. Inter or similar clean font.
+_________Round 3_______________
+Design a detailed component anatomy sheet for a Button component in a healthcare 
+SaaS design system. Light gray background (#F8FAFC). 
+
+Title: "Button — Component Anatomy & Token Map" bold dark text top left.
+Subtitle: "eManager UI Guidelines / Primitives / Button"
+
+MAIN ANATOMY SECTION (center top):
+Show one large Primary Button (medium size, label "Create Alert", with left icon).
+Use annotation arrows pointing to each part with labels:
+
+→ Container/Background: button/bg/default | border-radius: button/radius
+→ Label Text: button/text/color | typography: button/label/md  
+→ Left Icon: button/icon/size (16px) | button/icon/color
+→ Padding Left: button/padding/horizontal (16px)
+→ Padding Right: button/padding/horizontal (16px)  
+→ Padding Top/Bottom: button/padding/vertical (8px)
+→ Border: button/border/width (0px default) | button/border/color
+
+STATE VARIANTS SECTION (below anatomy):
+Show all 5 states in a row with labels:
+1. Default — solid blue #1D4ED8, white text
+2. Hover — darker blue #1E40AF, slight shadow
+3. Active/Pressed — darkest blue #1E3A8A, inset feel
+4. Disabled — gray #D1D5DB background, gray #9CA3AF text, 40% opacity, not-allowed cursor icon shown
+5. Loading — blue background, spinner icon replacing label, "Loading..." text dimmed
+
+SIZE VARIANTS (right column):
+Show 3 sizes stacked:
+- Small: height 28px, padding 8px/12px, font 12px
+- Medium: height 36px, padding 10px/16px, font 14px  
+- Large: height 44px, padding 12px/20px, font 16px
+
+TYPE VARIANTS (bottom row):
+- Primary (filled blue)
+- Secondary (white, blue border)
+- Ghost (transparent, blue text)
+- Danger (red, for destructive actions)
+- Success (green, for confirm actions)
+
+Add a token reference table at bottom right:
+| Token | Value |
+| button/bg/default | {color/action/primary} |
+| button/bg/hover | {color/blue/700} |
+| button/text/color | {color/white} |
+| button/radius | {radius/component} → 6px |
+| button/padding/h | {spacing/component/md} → 16px |
+
+Clean, technical documentation style. Use Inter font. Professional design system doc feel.
+
+_____________Round 4________
+Design a before/after comparison split screen for a healthcare SaaS dashboard 
+redesigned using a design system. Landscape orientation, 1400x800px.
+
+A vertical divider line in the center with a pill label "BEFORE / AFTER".
+
+LEFT HALF — "Before: No Design System" 
+Dark red badge top-left corner saying "BEFORE"
+Show a messy NOC Alert dashboard with obvious inconsistencies:
+- Navigation bar: mix of 2 different blue shades
+- Buttons: 3 different sizes on same screen (Primary "Create Alert" oversized, 
+  secondary buttons undersized, an icon button with wrong styling)
+- Status badges: same "In Progress" status shown in 3 different colors (blue, teal, gray)
+- Data table: inconsistent row padding (some rows tight, some loose)
+- Typography: 4 different font sizes used incorrectly, mixed weights
+- Alert cards (Outage, Alerts, Follow Up, Handover, Priority): each card has 
+  slightly different border radius, different shadow depth
+- Overall crowded, inconsistent, slight visual chaos
+- Red annotation circles drawn on: button inconsistency, badge color inconsistency, 
+  typography mix
+
+RIGHT HALF — "After: Design System Applied"
+Green badge top-right corner saying "AFTER"  
+Same NOC Alert dashboard but perfectly systematized:
+- Navigation: consistent dark #1E293B sidebar, uniform icon sizing
+- Buttons: one unified Primary Button style "Create Alert" (blue, 36px height, 
+  6px radius)
+- Status badges: color-coded consistently — red=Outage, amber=Pending, 
+  blue=In Progress, green=Addressed — same padding, same radius everywhere
+- Data table: perfect 48px row height, consistent 16px horizontal padding, 
+  alternating subtle row bg
+- Typography: clear hierarchy — 14px body, 12px secondary, 16px section headers
+- Alert summary cards: identical radius (8px), identical shadow (elevation-1), 
+  color only changes per category
+- Overall clean, spacious, consistent, professional clinical feel
+- Green checkmark annotations pointing to: unified buttons, consistent badges, 
+  clean table
+
+Bottom bar spanning full width dark #0F172A:
+Left: "12 components found in conflicting versions" 
+Right: "1 unified component library — 80+ components shipped"
+
+Professional medical software aesthetic. Show real UI density typical of clinical tools.
+___________Round 5________
+Design a Design System Foundation page for a healthcare SaaS product called 
+"eClinical Design System". Dark sidebar navigation on left, white content area.
+
+Page title: "Color Foundation" with subtitle "Primitive → Semantic → Component"
+
+SECTION 1: "Brand Palette — Primitive Tokens"
+Show color ramp swatches in rows:
+- Blue family: 9 swatches from #EBF2FF (100) to #1E3A8A (900), labeled color/blue/100 through /900
+- Teal family: 9 swatches from #F0FDFA to #134E4A
+- Red/Error: 5 swatches, color/red/50 to /900
+- Green/Success: 5 swatches  
+- Amber/Warning: 5 swatches
+- Gray neutral: 10 swatches from white to #030712
+
+SECTION 2: "Semantic Tokens — Light Mode"
+Grid of usage-mapped swatches with labels:
+Row 1 - Backgrounds: surface/default, surface/subtle, surface/overlay, surface/inverse
+Row 2 - Text: text/primary, text/secondary, text/disabled, text/inverse, text/link
+Row 3 - Actions: action/primary, action/primary-hover, action/danger, action/success, action/warning
+Row 4 - Borders: border/default, border/focus, border/error, border/strong
+
+SECTION 3: "Status Colors — Healthcare Context"
+Show 5 clinical status swatches with labels:
+🔴 Outage/Critical — #DC2626
+🟠 Pending/Warning — #D97706
+🔵 In Progress — #2563EB  
+🟢 Addressed/Success — #16A34A
+⚪ Inactive/Neutral — #6B7280
+
+Each swatch shows: color name, hex value, token name, and usage example ("Used for: Alert badges, status indicators")
+
+Bottom: Figma Variables panel mockup showing the collections structure.
+Clean, professional design system documentation aesthetic.
+________Round 6__________
+Design a component library overview page titled "eClinical Design System — 
+Component Library" for a healthcare SaaS. 1440px wide, light background.
+
+Show components organized in 3 category sections:
+
+SECTION 1: "🔲 Primitives" (header with blue accent)
+Display in a 4-column grid, each component shown with name and state count:
+
+Row 1:
+- Button (Primary, Secondary, Ghost, Danger variants shown small) — 5 states
+- Input Field (default, focus, error, disabled) — 4 states  
+- Checkbox (unchecked, checked, indeterminate, disabled) — 4 states
+- Radio Button (unselected, selected, disabled) — 3 states
+
+Row 2:
+- Toggle/Switch (off, on, disabled) — 3 states
+- Badge/Tag (success, error, warning, neutral, info — 5 colors)
+- Tooltip (shown above element)
+- Avatar (with initials, with photo, with status dot)
+
+Row 3:
+- Dropdown Select (closed, open state shown)
+- Text Area (default, focus, error)
+- Search Input (empty, with value, with clear button)
+- Date Picker (calendar shown)
+
+SECTION 2: "🧩 Patterns" (header with teal accent)
+Row 1:
+- Data Table (5 columns, 3 rows, with sort indicators, action buttons, 
+  row selection checkbox, status badge column)
+- Modal Dialog (header, content area, footer with 2 buttons, close X)
+- Alert Banner (4 variants: info, success, warning, error — each with icon + text + dismiss)
+- Form Layout (2-column form with labels, inputs, error messages, submit button)
+
+Row 2:
+- Stat Card (number large, label, trend indicator — like "14 Active Alerts ↑")
+- Empty State (illustration area + heading + subtext + CTA button)
+- Loading Skeleton (table row skeleton animation)
+- Pagination (prev, numbers, next — current page highlighted)
+
+SECTION 3: "📐 Layouts" (header with dark accent)
+- Top Navigation Bar (logo, tabs, user avatar, notification bell, settings)
+- Left Sidebar Navigation (collapsed and expanded states side by side)
+- Page Shell (sidebar + topnav + content area with breadcrumb)
+- Dashboard Grid (2-column stat cards + full-width table below)
+
+Each component tile has: component name, variant/state count badge, 
+"View Specs →" link. Tiles have 8px radius, 1px border #E2E8F0, 16px padding.
+Total count badge at top: "80+ Components · 3 Categories · 44 Token Groups"
+________Round 7__________
+Design a realistic Figma Variables panel mockup for a healthcare design system.
+Show it as if it's a real Figma interface screenshot, dark Figma UI chrome.
+
+Left panel "Variables" with Collections:
+- 📁 Colors (42 variables)
+- 📁 Fonts (12 variables)
+- 📁 Border / Radius (8 variables)
+- 📁 Spacing (16 variables)
+- 📁 Fields (6 variables)
+- 📁 Groups (3 variables)
+- 📁 All (show selected/highlighted in blue)
+
+Center panel shows variable list with columns: Name | Value
+Under "Colors" collection show:
+- sui-black | ████ 444447
+- sui-white | ████ FFFFFF
+- primary-color | ████ 0053AC
+- primary-color-dark | ████ 07202C
+- primary-color-light | ████ 4A839F
+- primary-color-subtle | ████ D2E3F4
+- primary2-color | ████ 3A76A8
+- primary2-color-dark | ████ 185387
+- primary2-color-right | ████ 67A22F
+- state-red | ████ F12626
+- state-red-dark | ████ C8101D
+- state-red-light | ████ E85550
+- state-green | ████ 12BF42
+- state-green-dark | ████ 0B9F32
+- state-green-light | ████ 27C653
+- state-green-subtle | ████ 70E189
+
+Right panel shows "Styles" panel:
+Text styles:
+- Ag Heading 1 25/Auto
+- Ag Heading 2 20/Auto
+- Ag Heading 3 18/Auto
+- Ag Lead Paragraph 16/Auto
+- Ag Body Large 15/Auto
+- Ag Body Medium 14/Auto
+- Ag Body Normal 14/Auto
+- Ag Body Small 12/Auto
+- Ag Small Label 12/Auto
+
+Effect styles:
+- Shadow-1
+- Shadow-2
+- Shadow-3
+- Shadow-4
+- Shadow-5
+
+Far right shows a Component property panel:
+Label: "Input smalllabel"
+"eManager UI Guidelines/Library" shown as component source
+Toggle switches (blue=on) for:
+- Show Tag ✓
+- Show Input ✓
+- Show calendar ✓
+- Show backspace ✓
+- Show Dropdown ✓
+- Show Search ✓
+- Show Label ✓
+- Show mandate ✓
+Text preview box showing "Input"
+
+Caption below: "Consolidated 12 high-frequency components into a single configurable Input component with 8 toggle properties"
+
+Match the exact Figma dark UI aesthetic faithfully.
